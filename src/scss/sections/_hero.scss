@@ -1,0 +1,48 @@
+@use "../base/variables" as *;
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-top: 160px;
+  padding-bottom: 194px;
+
+  &__content {
+    max-width: 630px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    line-height: 1.25;
+    color: rgba($mint--100, 0.8);
+
+    &--small {
+      font-size: 14px;
+      line-height: 1.4285;
+      color: rgba($mint--100, 0.3);
+    }
+  }
+
+  &__form {
+    margin-top: 12px;
+  }
+
+  &__image {
+    display: block;
+    max-width: 469px;
+    width: 100%;
+  }
+}

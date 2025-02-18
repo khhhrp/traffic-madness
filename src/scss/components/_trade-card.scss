@@ -1,0 +1,30 @@
+@use "../base/variables" as *;
+
+.trade-card {
+  display: flex;
+  max-width: 413px;
+  align-items: flex-start;
+  column-gap: 32px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2857;
+    letter-spacing: -0.04em;
+  }
+
+  &__text {
+    line-height: 1.25;
+    color: rgba($light, 0.8);
+  }
+}

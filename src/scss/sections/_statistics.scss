@@ -1,0 +1,72 @@
+@use "../base/variables" as *;
+
+.statistics {
+  position: relative;
+  color: $dark;
+  background-color: $light;
+  padding-top: 65px;
+  padding-bottom: 60px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 640px;
+    height: 60px;
+    background-color: $light;
+    bottom: 99%;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+
+  &__info-block {
+    display: contents;
+  }
+
+  &__title-block,
+  &__info-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  &__info-card {
+    row-gap: 8px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 44px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+  }
+
+  &__date {
+    font-size: 14px;
+    letter-spacing: -0.04em;
+    line-height: 1.4285;
+    color: rgba($dark, 0.5);
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.4285;
+    color: rgba($dark, 0.8);
+  }
+
+  &__value {
+    font-size: 60px;
+    font-weight: 500;
+    color: $purple--300;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+}

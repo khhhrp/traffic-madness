@@ -1,0 +1,47 @@
+@use "../base/variables" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 50px;
+  padding-block: 8px;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 82px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 32px;
+    row-gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 0.8235;
+    white-space: nowrap;
+    color: $light;
+    text-transform: uppercase;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $mint--500;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+}

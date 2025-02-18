@@ -1,1 +1,26 @@
-@use "./scss/custom-reset";
+//base
+@use "./scss/base/custom-reset";
+@use "./scss/base/variables";
+@use "./scss/base/general";
+
+//components
+@use "./scss/components/main-container";
+@use "./scss/components//burger-btn";
+@use "./scss/components/icon";
+@use "./scss/components/main-btn";
+@use "./scss/components/form";
+@use "./scss/components/card-deal";
+@use "./scss/components/trade-card";
+
+//layouts
+@use "./scss/layouts/header";
+
+//sections
+@use "./scss/sections/hero";
+@use "./scss/sections/statistics";
+@use "./scss/sections/deals-section";
+@use "./scss/sections/about";
+@use "./scss/sections/trade-section";
+
+//utility
+@use "./scss/utility/helpers";

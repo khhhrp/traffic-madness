@@ -1,0 +1,7 @@
+@use "../base/variables" as *;
+
+body {
+  font-family: "IBM Plex Sans", serif;
+  background-color: $purple--900;
+  color: $light;
+}

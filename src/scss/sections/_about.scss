@@ -1,0 +1,75 @@
+@use "../base/variables" as *;
+
+.about {
+  position: relative;
+  background-color: $light;
+  color: $dark;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 640px;
+    height: 60px;
+    background-color: $light;
+    bottom: 99%;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  &__container {
+    padding-top: 56px;
+    padding-bottom: 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 25px;
+  }
+
+  &__content {
+    max-width: 413px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2727;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    color: rgba($purple--900, 0.8);
+    line-height: 1.25;
+  }
+
+  &__cta-banner {
+    max-width: 630px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    color: $light;
+    background-color: $purple--300;
+    border-radius: 4px;
+    padding: 32px 64px 40px;
+  }
+
+  &__cta-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2857;
+    letter-spacing: -0.04em;
+  }
+
+  &__form {
+    input {
+      background-color: $purple--400;
+      padding-right: 173px;
+    }
+  }
+}
