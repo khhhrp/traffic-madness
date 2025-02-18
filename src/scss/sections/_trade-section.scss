@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/typography" as *;
 
 .trade-section {
   padding-top: 96px;
@@ -9,12 +10,8 @@
   column-gap: 128px;
 
   &__title {
+    @extend %h3;
     max-width: 305px;
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1.2727;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
   }
 
   &__cards {

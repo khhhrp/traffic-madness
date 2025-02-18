@@ -24,6 +24,16 @@
 
     &:focus {
       box-shadow: 0 0 4px 0 $cyan--400;
+
+      &:valid {
+        background-color: rgba(green, 0.2);
+      }
+
+      &:not(:placeholder-shown) {
+        &:invalid {
+          background-color: rgba(red, 0.2);
+        }
+      }
     }
   }
 
@@ -44,8 +54,8 @@
     background-color: $cyan--400;
     box-shadow: 0 0 4px 0 $cyan--400;
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: ease;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
 
     @media (hover: hover) {
       cursor: pointer;

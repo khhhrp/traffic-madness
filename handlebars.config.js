@@ -69,10 +69,33 @@ const tradeCards = [
   },
 ];
 
+const serviceCards = [
+  {
+    cardTitle: "Создайте аккаунт",
+    cardText:
+      "Начните бесплатную 3-дневную пробную версию. Кредитная карта не требуется.",
+  },
+  {
+    cardTitle: "Подключить обмен API ключами",
+    cardText: "Просто вставьте свои ключи API из личного кабинета.",
+  },
+  {
+    cardTitle: "Настройте аккаунт",
+    cardText:
+      "Поставьте нужные настройки депозита на каждый сигнал и нажмите сохранить.",
+  },
+  {
+    cardTitle: "Ваш копитрейдер запущен",
+    cardText:
+      "Просто расслабьтесь и начните получать пассивный доход от криптовалюты с помощью TradeBlade.",
+  },
+];
+
 export default {
   partialDirectory: resolve(__dirname, "src/partials"),
   context: {
     deals: deals,
     tradeCard: tradeCards,
+    serviceCard: serviceCards,
   },
 };

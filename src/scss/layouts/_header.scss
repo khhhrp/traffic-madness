@@ -11,6 +11,28 @@
     display: flex;
     align-items: center;
     column-gap: 82px;
+
+    @media (width < 1024px) {
+      opacity: 0;
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      padding-top: 32px;
+      background-color: $purple--300;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 20px;
+      translate: -100% 0;
+      transition-property: translate, opacity;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing-function;
+    }
+
+    &--active {
+      opacity: 1;
+      translate: 0;
+    }
   }
 
   &__nav {
@@ -20,6 +42,13 @@
     column-gap: 32px;
     row-gap: 15px;
     flex-wrap: wrap;
+
+    @media (width < 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 32px;
+      padding-top: 32px;
+    }
   }
 
   &__link {
@@ -29,8 +58,8 @@
     color: $light;
     text-transform: uppercase;
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: ease;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
 
     @media (hover: hover) {
       &:hover {

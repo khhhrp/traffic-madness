@@ -2,6 +2,7 @@
 @use "./scss/base/custom-reset";
 @use "./scss/base/variables";
 @use "./scss/base/general";
+@use "./scss/base/typography";
 
 //components
 @use "./scss/components/main-container";
@@ -11,6 +12,7 @@
 @use "./scss/components/form";
 @use "./scss/components/card-deal";
 @use "./scss/components/trade-card";
+@use "./scss/components/service-card";
 
 //layouts
 @use "./scss/layouts/header";
@@ -21,6 +23,7 @@
 @use "./scss/sections/deals-section";
 @use "./scss/sections/about";
 @use "./scss/sections/trade-section";
+@use "./scss/sections/services";
 
 //utility
 @use "./scss/utility/helpers";

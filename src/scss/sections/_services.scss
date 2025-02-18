@@ -1,0 +1,45 @@
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.services {
+  position: relative;
+  color: $light;
+  background-color: $purple--300;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 640px;
+    height: 60px;
+    background-color: $purple--300;
+    bottom: 99%;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    padding-top: 56px;
+    padding-bottom: 96px;
+  }
+
+  &__title {
+    @extend %h3;
+  }
+
+  &__cards {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 2px solid rgba($light, 0.3);
+  }
+
+  &__btn {
+    max-width: 343px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}

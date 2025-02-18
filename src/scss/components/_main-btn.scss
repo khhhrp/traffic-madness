@@ -13,8 +13,8 @@
   background-color: $cyan--400;
   box-shadow: 0 0 4px 0 $cyan--400;
   transition-property: color, border-color, background-color, translate;
-  transition-duration: 250ms;
-  transition-timing-function: ease;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
 
   &:active {
     translate: 0 4px;

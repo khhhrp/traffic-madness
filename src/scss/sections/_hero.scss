@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/typography" as *;
 
 .hero {
   display: flex;
@@ -30,8 +31,8 @@
     color: rgba($mint--100, 0.8);
 
     &--small {
-      font-size: 14px;
-      line-height: 1.4285;
+      @extend %p14;
+      letter-spacing: normal;
       color: rgba($mint--100, 0.3);
     }
   }

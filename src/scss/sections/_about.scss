@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/typography" as *;
 
 .about {
   position: relative;
@@ -33,11 +34,7 @@
   }
 
   &__title {
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1.2727;
-    text-transform: uppercase;
-    letter-spacing: -0.04em;
+    @extend %h3;
     padding-bottom: 10px;
   }
 
@@ -59,11 +56,8 @@
   }
 
   &__cta-title {
+    @extend %h5;
     text-align: center;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.2857;
-    letter-spacing: -0.04em;
   }
 
   &__form {

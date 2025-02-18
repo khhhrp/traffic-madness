@@ -1,19 +1,21 @@
 //color palette
-
 $dark: #000;
 $light: #ffffff;
 $gray: #a5aebc;
 
 $purple--900: #030718;
 $purple--600: #201a4f;
-$purple--400: #4A3BB3;
+$purple--400: #4a3bb3;
 $purple--300: #6a54ff;
 
-
-$dark-blue--600:#434f70;
+$dark-blue--600: #434f70;
 $dark-blue--300: #6073a1;
 
 $mint--500: #35ff9e;
 $mint--100: #e7f7f8;
 
 $cyan--400: #57e1ff;
+
+// tranaition
+$transition-duration: 250ms;
+$transition-timing-function: ease;
