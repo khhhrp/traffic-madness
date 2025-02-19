@@ -78,9 +78,9 @@ gsap.fromTo(
 
 gsap.fromTo(
   ".deals-section__deals",
-  { y: 50, opacity: 0 },
+  { x: 50, opacity: 0 },
   {
-    y: 0,
+    x: 0,
     opacity: 1,
     scrollTrigger: {
       trigger: ".statistics",

@@ -30,18 +30,6 @@
     background-image: linear-gradient(to top, $cyan--400, transparent);
     background-repeat: no-repeat;
     background-size: 100% 65px;
-
-    // &::before {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 50%;
-    //   translate: -50%;
-    //   width: 69px;
-    //   height: 65px;
-    //   background-image: linear-gradient(to top, $cyan--400, transparent);
-    // }
   }
 
   &__image {

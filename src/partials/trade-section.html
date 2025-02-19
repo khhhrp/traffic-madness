@@ -1,0 +1,16 @@
+<section class="trade-section main-container">
+  <h3 class="trade-section__title">tradeblade это</h3>
+  <div class="trade-section__cards">
+    {{#each tradeCard}}
+    <article class="trade-card">
+      <svg class="icon icon--56">
+        <use href="{{cardIcon}}"></use>
+      </svg>
+      <div class="trade-card__content">
+        <h5 class="trade-card__title">{{cardTitle}}</h5>
+        <p class="trade-card__text">{{cardText}}</p>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+</section>
