@@ -23,10 +23,10 @@
     column-gap: 4px;
     align-items: center;
     color: $mint--500;
-    padding-bottom: 72px;
+    padding-bottom: 48px;
 
     @media (width < 768px) {
-      padding-bottom: 24px;
+      padding-bottom: 12px;
     }
 
     &::before {
@@ -43,7 +43,7 @@
     align-items: center;
     column-gap: 20px;
     overflow-x: scroll;
-    padding-bottom: 24px;
+    padding-block: 24px;
     padding-inline: 200px;
 
     @media (width < 1024px) {

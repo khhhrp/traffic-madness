@@ -35,7 +35,7 @@
       box-shadow: 0 0 4px 0 $cyan--400;
 
       &:valid {
-        background-color: rgba(green, 0.2);
+        background-color: rgba(green, 0.7);
       }
 
       &:not(:placeholder-shown) {

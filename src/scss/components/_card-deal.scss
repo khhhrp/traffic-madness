@@ -1,7 +1,14 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
+@mixin transition-color {
+  transition-property: color;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-timing-function;
+}
+
 .card-deal {
+  $root: &;
   flex-shrink: 0;
   max-width: 300px;
   width: 100%;
@@ -20,11 +27,45 @@
     0 100%,
     0 0
   );
-
   border-radius: 4px;
   background-image: url("./img/logo02.svg");
   background-repeat: no-repeat;
   background-position: right 8px;
+  transition-property: background-color, color;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-timing-function;
+
+  @media (hover: hover) {
+    &:hover {
+      animation: pulse 0.5s linear;
+      background-color: $mint--500;
+      color: $dark;
+
+      #{$root} {
+        &__subtitle,
+        &__date {
+          color: rgba($dark, 0.6);
+        }
+
+        &__label,
+        &__text {
+          color: rgba($dark, 0.8);
+        }
+
+        &__value {
+          color: $purple--300;
+        }
+      }
+    }
+  }
+
+  &__subtitle,
+  &__date,
+  &__label,
+  &__text,
+  &__value {
+    @include transition-color;
+  }
 
   &__title-block,
   &__info-block {
@@ -84,5 +125,17 @@
 
   &__text {
     text-transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }

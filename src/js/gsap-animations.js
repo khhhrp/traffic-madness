@@ -54,7 +54,7 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: ".statistics",
-      start: "top-=350",
+      start: "top-=500",
       end: "+=50",
       scrub: true,
     },
@@ -69,27 +69,23 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: ".statistics",
-      start: "top-=300",
+      start: "top-=450",
       end: "+=100",
       scrub: true,
     },
   }
 );
 
-gsap.fromTo(
-  ".deals-section__deals",
-  { x: 50, opacity: 0 },
-  {
-    x: 0,
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".statistics",
-      start: "top-=300",
-      end: "+=100",
-      scrub: true,
-    },
-  }
-);
+gsap.to(".deals-section__deals", {
+  scrollLeft: 150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".deals-section",
+    start: "top-=90%",
+    end: "+=150",
+    scrub: 1,
+  },
+});
 
 gsap.to(".about__cta-banner", {
   y: -10,
