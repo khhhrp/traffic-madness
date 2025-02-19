@@ -1,5 +1,6 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
+@use "../utility/helpers" as *;
 
 .about {
   position: relative;
@@ -18,8 +19,8 @@
   }
 
   &__container {
-    padding-top: 56px;
-    padding-bottom: 92px;
+    @extend .pt-56, .pb-96;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

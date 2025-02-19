@@ -1,16 +1,16 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
+@use "../utility/helpers" as *;
 
 .deals-section {
-  padding-top: 96px;
-  padding-bottom: 156px;
+  @extend .pt-96, .pb-156;
 
   &__title {
     @extend %h3;
   }
 
   &__status {
-    @extend %p14;
+    @extend %text14;
     display: flex;
     column-gap: 4px;
     align-items: center;

@@ -1,9 +1,10 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
+@use "../utility/helpers" as *;
 
 .trade-section {
-  padding-top: 96px;
-  padding-bottom: 156px;
+  @extend .pt-96, .pb-156;
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

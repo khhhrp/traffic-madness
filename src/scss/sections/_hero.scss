@@ -31,7 +31,7 @@
     color: rgba($mint--100, 0.8);
 
     &--small {
-      @extend %p14;
+      @extend %text14;
       letter-spacing: normal;
       color: rgba($mint--100, 0.3);
     }

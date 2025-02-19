@@ -1,0 +1,59 @@
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+@use "../utility/helpers" as *;
+
+.tariffs {
+  @extend .pt-96, .pb-96;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  &__title {
+    @extend %h3;
+  }
+
+  &__tabs {
+    max-width: 413px;
+    width: 100%;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    background-color: rgba($purple--300, 0.4);
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  &__tab-btn {
+    @extend %text24;
+
+    font-family: inherit;
+    border-radius: inherit;
+    border: none;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    padding: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba($cyan--400, 0.8);
+    transition-property: background-color, color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+
+    &--active {
+      background-color: $cyan--400;
+      color: $dark;
+      pointer-events: none;
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    column-gap: 20px;
+  }
+}

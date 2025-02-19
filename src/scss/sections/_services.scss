@@ -1,5 +1,6 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
+@use "../utility/helpers" as *;
 
 .services {
   position: relative;
@@ -18,11 +19,11 @@
   }
 
   &__container {
+    @extend .pt-56, .pb-96;
+
     display: flex;
     flex-direction: column;
     row-gap: 80px;
-    padding-top: 56px;
-    padding-bottom: 96px;
   }
 
   &__title {
