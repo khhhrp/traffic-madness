@@ -3,7 +3,6 @@
 
 .tariff-card {
   max-width: 413px;
-  min-height: 556px;
   width: 100%;
   padding-block: 24px;
   border-radius: 8px;
@@ -21,6 +20,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 56px;
+
+    @media (width < 768px) {
+      row-gap: 24px;
+    }
   }
 
   &__title {
@@ -29,6 +32,10 @@
     line-height: 1.5;
     letter-spacing: -0.04em;
     padding-inline: 24px;
+
+    @media (width < 768px) {
+      font-size: 20px;
+    }
   }
 
   &__list {
@@ -47,6 +54,10 @@
     padding-bottom: 8px;
     padding-inline: 24px;
 
+    @media (width < 768px) {
+      font-size: 16px;
+    }
+
     svg {
       flex-shrink: 0;
     }
@@ -63,7 +74,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+
   }
 
   &__price {
@@ -99,6 +112,11 @@
     @media (hover: hover) {
       cursor: pointer;
     }
+
+
+  @media (width < 768px) {
+    padding: 6px;
+  }
   }
 
   &__btn {

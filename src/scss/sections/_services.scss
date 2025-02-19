@@ -11,11 +11,22 @@
     content: "";
     display: block;
     position: absolute;
-    width: 640px;
+    max-width: 640px;
+    width: 100%;
     height: 60px;
     background-color: $purple--300;
     bottom: 99%;
     clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+
+    @media (width < 1024px) {
+      height: 30px;
+      clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+    }
+
+    @media (width < 768px) {
+      max-width: 250px;
+      clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    }
   }
 
   &__container {
@@ -24,6 +35,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 80px;
+
+    @media (width < 1024px) {
+      row-gap: 40px;
+      padding-bottom: 44px;
+    }
   }
 
   &__title {
@@ -33,9 +49,18 @@
   &__cards {
     display: flex;
     column-gap: 20px;
+    row-gap: 32px;
     justify-content: space-between;
     align-items: flex-start;
     border-top: 2px solid rgba($light, 0.3);
+    flex-wrap: wrap;
+
+
+    @media (width < 1024px) {
+      border-top: none;
+      border-left: 2px solid rgba($light, 0.3);
+      flex-direction: column;
+    }
   }
 
   &__btn {

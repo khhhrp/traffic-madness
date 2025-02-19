@@ -2,6 +2,8 @@
 
 .burger-btn {
   $root: &;
+  right: 0;
+  top: 0;
   display: none;
   align-items: center;
   justify-content: center;
@@ -12,7 +14,7 @@
   background-color: transparent;
   z-index: 20;
 
-  @media (width < 1024px) {
+  @media (width < 768px) {
     display: flex;
   }
 

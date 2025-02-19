@@ -5,6 +5,15 @@
 .deals-section {
   @extend .pt-96, .pb-156;
 
+  @media (width < 1024px) {
+    padding-bottom: 83px;
+  }
+
+  @media (width < 768px) {
+    padding-top: 48px;
+  }
+
+
   &__title {
     @extend %h3;
   }
@@ -32,7 +41,11 @@
     column-gap: 20px;
     overflow-x: scroll;
     padding-bottom: 24px;
-    // margin-right: -200px;
+    padding-inline: 200px;
+
+    @media (width < 1024px) {
+      padding-inline: 16px;
+    }
 
     &::-webkit-scrollbar {
       height: 6px;

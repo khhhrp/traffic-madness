@@ -9,10 +9,25 @@
   align-items: flex-start;
   justify-content: space-between;
   column-gap: 128px;
+  row-gap: 40px;
+
+  @media (width < 1024px) {
+    padding-top: 256px;
+    padding-bottom: 101px;
+    flex-direction: column;
+  }
+
+  @media (width < 768px) {
+    padding-top: 181px;
+  }
 
   &__title {
     @extend %h3;
     max-width: 305px;
+
+    @media (width < 1024px) {
+      max-width: 100%;
+    }
   }
 
   &__cards {
@@ -22,5 +37,10 @@
     column-gap: 21px;
     row-gap: 72px;
     max-width: 850px;
+
+    @media (width < 1024px) {
+      // flex-direction: column;
+      margin-inline: auto;
+    }
   }
 }

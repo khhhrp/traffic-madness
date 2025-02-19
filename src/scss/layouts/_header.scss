@@ -2,21 +2,29 @@
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   column-gap: 50px;
   padding-block: 8px;
+  background-color: $purple--900;
+  z-index: 100;
+  overflow-x: hidden;
+
+  @media (width < 768px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
 
   &__logo {
     width: 132px;
+    flex-shrink: 0;
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
-    column-gap: 82px;
+    display: contents;
 
-    @media (width < 1024px) {
+    @media (width < 768px) {
+      display: flex;
       opacity: 0;
       position: fixed;
       inset: 0;
@@ -26,6 +34,7 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
+      row-gap: 32px;
       padding: 20px;
       translate: -100% 0;
       transition-property: translate, opacity;
@@ -42,16 +51,15 @@
   &__nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    column-gap: 32px;
+    gap: 32px;
     row-gap: 15px;
-    flex-wrap: wrap;
+    overflow-x: auto;
 
-    @media (width < 1024px) {
+    @media (width < 768px) {
       flex-direction: column;
       align-items: flex-start;
-      row-gap: 32px;
       padding-top: 32px;
+      overflow: visible;
     }
   }
 

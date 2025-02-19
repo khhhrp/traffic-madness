@@ -15,6 +15,10 @@
   transition-duration: $animation-duration;
   transition-timing-function: $animation-timing-function;
 
+  @media (width < 768px) {
+    max-width: 100%;
+  }
+
   @media (hover: hover) {
     &:hover {
       background-color: rgba($gray--100, 0.3);
