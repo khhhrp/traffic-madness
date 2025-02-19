@@ -37,30 +37,13 @@
 
   &__container {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
     column-gap: 50px;
     row-gap: 40px;
 
     @media (width < 1024px) {
-      flex-direction: column;
-    }
-
-
-    @media (width < 768px) {
-      row-gap: 20px;
-    }
-  }
-
-  &__info-block {
-    display: contents;
-    column-gap: 65px;
-    row-gap: 32px;
-    flex-wrap: wrap;
-    width: 100%;
-
-    @media (width < 1024px) {
-      display: flex;
+      flex-wrap: wrap;
+      row-gap: 32px;
     }
   }
 
@@ -68,13 +51,27 @@
   &__info-card {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 1;
+  }
+
+  &__title-block {
     row-gap: 4px;
+
+    @media (width < 1024px) {
+      flex-basis: 100%;
+      margin-bottom: 8px;
+    }
   }
 
   &__info-card {
     row-gap: 8px;
-    flex-grow: 1;
-    flex-basis: 135px;
+    justify-content: space-between;
+
+    @media (width < 1024px) {
+     flex-basis: calc(50% - 25px);
+    }
   }
 
   &__title {

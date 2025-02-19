@@ -1,4 +1,6 @@
-"use strict";
+import "./gsap-animations";
+
+("use strict");
 
 document.addEventListener("DOMContentLoaded", () => {
   const burgerBtn = document.querySelector(".burger-btn");
@@ -10,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
       target.classList.toggle("header__menu--active");
     });
   }
-
   function removeClassOnResize(...elements) {
     window.addEventListener("resize", () => {
       elements.forEach((el) =>

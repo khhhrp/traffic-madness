@@ -8,7 +8,7 @@
   &__container {
     display: flex;
 
-    @media (width < 1024px) {
+    @media (width < 768px) {
       flex-direction: column;
     }
   }
@@ -21,6 +21,10 @@
     padding-block: 40px;
     min-height: 350px;
     row-gap: 40px;
+
+    @media (width < 768px) {
+      min-height: 0;
+    }
   }
 
   &__left {
@@ -41,7 +45,7 @@
       background-color: rgba($light, 0.3);
     }
 
-    @media (width < 1024px) {
+    @media (width < 768px) {
       padding-right: 0;
       max-width: 100%;
       border-right: none;
@@ -64,6 +68,10 @@
     @media (width < 1024px) {
       align-items: flex-start;
       padding-left: 0;
+    }
+
+    @media (width < 768px) {
+      padding-block: 20px;
     }
   }
 

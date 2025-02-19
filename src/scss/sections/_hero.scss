@@ -1,6 +1,15 @@
 @use "../base/variables" as *;
 @use "../base/typography" as *;
 
+@mixin animation-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-name: up;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
 .hero {
   display: flex;
   justify-content: space-between;
@@ -11,13 +20,15 @@
 
   @media (width < 1024px) {
     flex-direction: column;
-    padding-top: 160px;
+    padding-top: 80px;
     padding-bottom: 97px;
     row-gap: 66px;
   }
 
   @media (width < 768px) {
     row-gap: 33px;
+    padding-top: 40px;
+    padding-bottom: 67px;
   }
 
   &__content {
@@ -35,24 +46,44 @@
 
   &__title {
     @extend %h1;
+    @include animation-up;
+
+    @media (width < 1024px) {
+      animation-delay: 100ms;
+    }
   }
 
   &__text {
+    @include animation-up;
     line-height: 1.25;
     color: rgba($mint--100, 0.8);
+
+    @media (width < 1024px) {
+      animation-delay: 200ms;
+    }
 
     &--small {
       @extend %text14;
       letter-spacing: normal;
       color: rgba($mint--100, 0.3);
+
+      @media (width < 1024px) {
+        animation-delay: 400ms;
+      }
     }
   }
 
   &__form {
+    @include animation-up;
     margin-top: 12px;
+
+    @media (width < 1024px) {
+      animation-delay: 300ms;
+    }
   }
 
   &__image {
+    @include animation-up;
     display: block;
     max-width: 469px;
     width: 100%;
@@ -60,5 +91,12 @@
     @media (width < 1024px) {
       align-self: center;
     }
+  }
+}
+
+@keyframes up {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
