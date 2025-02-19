@@ -3,7 +3,8 @@
 
 .trade-card {
   display: flex;
-  flex-basis: 414px;
+  flex-basis: 413px;
+  flex-shrink: 0;
   align-items: flex-start;
   column-gap: 32px;
 

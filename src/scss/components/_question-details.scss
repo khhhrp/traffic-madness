@@ -44,6 +44,10 @@
     column-gap: 16px;
     padding: 16px;
 
+    &::-webkit-details-marker {
+      display: none;
+    }
+
     @media (width < 768px) {
       font-size: 20px;
     }

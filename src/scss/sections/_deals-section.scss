@@ -13,7 +13,6 @@
     padding-top: 48px;
   }
 
-
   &__title {
     @extend %h3;
   }
@@ -25,6 +24,10 @@
     align-items: center;
     color: $mint--500;
     padding-bottom: 72px;
+
+    @media (width < 768px) {
+      padding-bottom: 24px;
+    }
 
     &::before {
       content: "";
