@@ -1,0 +1,77 @@
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.footer {
+  border-bottom: 5px solid $purple--300;
+
+  &__container {
+    display: flex;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 40px;
+    min-height: 350px;
+    row-gap: 40px;
+  }
+
+  &__left {
+    max-width: 868px;
+    width: 100%;
+    border-right: 1px solid rgba($light, 0.3);
+    padding-right: 40px;
+  }
+
+  &__right {
+    padding-left: 40px;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+
+  &__title,
+  &__text {
+    @extend %text14;
+
+    letter-spacing: normal;
+    text-transform: uppercase;
+    color: rgba($light, 0.4);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 10px;
+  }
+
+  &__nav-link {
+    color: rgba($light, 0.7);
+    font-weight: 500;
+    line-height: 1.25;
+    white-space: nowrap;
+    color: rgba($light, 0.7);
+    text-transform: uppercase;
+    transition-property: color;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-timing-function;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $mint--500;
+      }
+    }
+  }
+
+  &__logo {
+    width: 165px;
+  }
+
+  &__text {
+    text-transform: none;
+  }
+}

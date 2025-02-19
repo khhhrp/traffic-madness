@@ -4,10 +4,16 @@
 
 .tariffs {
   @extend .pt-96, .pb-96;
+  border-bottom: 1px solid rgba($gray--300, 0.4);
 
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
+  &__container {
+    max-width: 846px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
 
   &__title {
     @extend %h3;
@@ -38,8 +44,8 @@
     text-transform: uppercase;
     color: rgba($cyan--400, 0.8);
     transition-property: background-color, color;
-    transition-duration: $transition-duration;
-    transition-timing-function: $transition-timing-function;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-timing-function;
 
     &--active {
       background-color: $cyan--400;
@@ -54,6 +60,6 @@
 
   &__cards {
     display: flex;
-    column-gap: 20px;
+    gap: 20px;
   }
 }

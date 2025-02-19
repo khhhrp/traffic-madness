@@ -7,6 +7,10 @@
   column-gap: 50px;
   padding-block: 8px;
 
+  &__logo {
+    width: 132px;
+  }
+
   &__menu {
     display: flex;
     align-items: center;
@@ -25,8 +29,8 @@
       padding: 20px;
       translate: -100% 0;
       transition-property: translate, opacity;
-      transition-duration: $transition-duration;
-      transition-timing-function: $transition-timing-function;
+      transition-duration: $animation-duration;
+      transition-timing-function: $animation-timing-function;
     }
 
     &--active {
@@ -55,11 +59,11 @@
     font-size: 14px;
     line-height: 0.8235;
     white-space: nowrap;
-    color: $light;
+    color: rgba($light, 0.7);
     text-transform: uppercase;
     transition-property: color;
-    transition-duration: $transition-duration;
-    transition-timing-function: $transition-timing-function;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-timing-function;
 
     @media (hover: hover) {
       &:hover {

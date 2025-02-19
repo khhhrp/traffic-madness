@@ -1,0 +1,61 @@
+@use "../base/variables" as *;
+
+.question-details {
+  $root: &;
+  background-color: $gray--100;
+  border-radius: 4px;
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+
+  @media (hover: hover) {
+    cursor: pointer;
+  }
+
+  &[open] {
+    background-color: $purple--300;
+    color: rgba($light, 0.8);
+    row-gap: 12px;
+
+    svg {
+      rotate: 180deg;
+    }
+
+    #{$root} {
+      &__text {
+        translate: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  svg {
+    transition: rotate $animation-duration $animation-timing-function;
+    flex-shrink: 0;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+    padding: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding-inline: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__text {
+    translate: -100%;
+    opacity: 0;
+    transition-property: translate, opacity;
+    transition-duration: $animation-duration;
+    transition-delay: 300ms;
+    transition-timing-function: $animation-timing-function;
+  }
+}

@@ -6,6 +6,7 @@
 
 //components
 @use "./scss/components/main-container";
+@use "./scss/components/logo";
 @use "./scss/components//burger-btn";
 @use "./scss/components/icon";
 @use "./scss/components/main-btn";
@@ -14,9 +15,12 @@
 @use "./scss/components/trade-card";
 @use "./scss/components/service-card";
 @use "./scss/components/tariff-card";
+@use "./scss/components/review-card";
+@use "./scss/components/question-details";
 
 //layouts
 @use "./scss/layouts/header";
+@use "./scss/layouts/footer";
 
 //sections
 @use "./scss/sections/hero";
@@ -26,6 +30,9 @@
 @use "./scss/sections/trade-section";
 @use "./scss/sections/services";
 @use "./scss/sections/tariffs";
+@use "./scss/sections/reviews";
+@use "./scss/sections/questions";
+@use "./scss/sections/banner-section";
 
 //utility
 @use "./scss/utility/helpers";

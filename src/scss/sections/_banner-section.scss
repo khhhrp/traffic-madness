@@ -1,0 +1,27 @@
+@use "../base/variables" as *;
+@use "../base/typography" as *;
+
+.banner-section {
+  padding-block: 40px;
+  background-color: $purple--300;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+
+  &__title {
+    @extend %h5;
+    max-width: 523px;
+  }
+
+  &__form {
+    input {
+      max-width: 520px;
+      padding-right: 238px;
+      background-color: $purple--400;
+    }
+  }
+}

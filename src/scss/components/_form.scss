@@ -2,6 +2,7 @@
 
 .form {
   max-width: 500px;
+  width: 100%;
   position: relative;
 
   &__input {
@@ -54,8 +55,8 @@
     background-color: $cyan--400;
     box-shadow: 0 0 4px 0 $cyan--400;
     transition-property: background-color;
-    transition-duration: $transition-duration;
-    transition-timing-function: $transition-timing-function;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-timing-function;
 
     @media (hover: hover) {
       cursor: pointer;

@@ -2,6 +2,8 @@
 $dark: #000;
 $light: #ffffff;
 $gray: #a5aebc;
+$gray--300: #D9D9D9;
+$gray--100: #EAEFF0;
 
 $purple--900: #030718;
 $purple--600: #201a4f;
@@ -17,5 +19,5 @@ $mint--100: #e7f7f8;
 $cyan--400: #57e1ff;
 
 // tranaition
-$transition-duration: 250ms;
-$transition-timing-function: ease;
+$animation-duration: 250ms;
+$animation-timing-function: ease;
