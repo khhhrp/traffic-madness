@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, TextPlugin);
 
 gsap.fromTo(
   ".statistics__value--first",
@@ -111,7 +112,7 @@ gsap.fromTo(
   }
 );
 
-gsap.to(".services__btn, .tariff-card__btn", {
+gsap.to(".services__btn, .tariff-card__btn, .banner-section__form", {
   scale: 1.05,
   repeat: -1,
   yoyo: true,
@@ -134,6 +135,21 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
+  ".reviews__title",
+  { y: 20, opacity: 0 },
+  {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".reviews",
+      start: "top-=90%",
+      end: "+=100",
+      scrub: true,
+    },
+  }
+);
+
+gsap.fromTo(
   ".review-card--first",
   { x: -15, y: -15, opacity: 0 },
   {
@@ -142,7 +158,7 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: ".reviews",
-      start: "top-=50%",
+      start: "top-=70%",
       end: "+=100",
       scrub: true,
     },
@@ -158,7 +174,7 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: ".reviews",
-      start: "top-=45%",
+      start: "top-=65%",
       end: "+=100",
       scrub: true,
     },
@@ -174,7 +190,7 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: ".reviews",
-      start: "top-=40%",
+      start: "top-=60%",
       end: "+=100",
       scrub: true,
     },
@@ -190,24 +206,27 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       trigger: ".reviews",
-      start: "top-=35%",
+      start: "top-=55%",
       end: "+=100",
       scrub: true,
     },
   }
 );
 
-gsap.fromTo(
-  ".reviews__title",
-  { y: 20, opacity: 0 },
-  {
-    y: 0,
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".reviews",
-      start: "top-=80%",
-      end: "+=100",
-      scrub: true,
-    },
-  }
-);
+document.querySelectorAll("[data-scroll]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const target = document.querySelector(link.getAttribute("href"));
+
+    if (target) {
+      gsap.to(window, {
+        duration: 0.7,
+        scrollTo: { y: target, offsetY: 50 },
+        ease: "power2.out",
+      });
+    } else {
+      console.warn("Якорь не найден:", link.getAttribute("href"));
+    }
+  });
+});

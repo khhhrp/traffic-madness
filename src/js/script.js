@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerBtn = document.querySelector(".burger-btn");
   const menu = document.querySelector(".header__menu");
   const tabBtns = document.querySelectorAll(".tariffs__tab-btn");
+  const headerNavLinks = document.querySelectorAll(".header__link");
 
   tabBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -32,6 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  headerNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("header__menu--active");
+      burgerBtn.classList.remove("burger-btn--active");
+    });
+  });
+
   toggleClassOnClick(burgerBtn, menu, "burger-btn--active");
+
   removeClassOnResize(burgerBtn, menu);
 });
