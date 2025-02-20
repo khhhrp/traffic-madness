@@ -223,3 +223,71 @@ document.querySelectorAll("[data-scroll]").forEach((link) => {
     }
   });
 });
+
+gsap.fromTo(
+  ".about__title",
+  { opacity: 0, y: -20 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top-=700",
+      end: "+=150",
+      toggleActions: "play none none reverse",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".about__content p",
+  { opacity: 0, y: -20 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top-=700",
+      end: "+=150",
+      toggleActions: "play none none reverse",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".about__cta-banner",
+  { opacity: 0, y: 20 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top-=600",
+      end: "+=150",
+      toggleActions: "play none none reverse",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".services__cards .service-card",
+  { opacity: 0, x: -15 },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 0.3,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".services__cards",
+      start: "top-=780",
+      end: "+=100",
+      toggleActions: "play none none reverse",
+      markers: true,
+    },
+  }
+);
