@@ -287,7 +287,6 @@ gsap.fromTo(
       start: "top-=780",
       end: "+=100",
       toggleActions: "play none none reverse",
-      markers: true,
     },
   }
 );
