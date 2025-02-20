@@ -38,7 +38,7 @@
   @media (hover: hover) {
     &:hover {
       animation: pulse 0.5s linear;
-      background-color: $mint--500;
+      background-color: $cyan--400;
       color: $dark;
 
       #{$root} {
